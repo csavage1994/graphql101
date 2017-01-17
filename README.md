@@ -3,6 +3,7 @@ This will be a no BS guide to understanding what GraphQL is and why it does what
 
 ## What is GraphQL + why do I need it?
 Think of GraphQL like it's Amazon, if you've ever ordered multiple items from Amazon at the same time from different sources, you'd know there's 2 options:
+
 1. Select `Ship items seperately` with the knowledge that there's no guarantee that all the items will arrive at the same time and you have no clue how each of them will be packaged (We'll talk more about why this is imporant coming up)
 2. Select `Ship items together`. In this case, Amazon is now handling the retrieval of each item and packaging them together before sending them out to you.
 
@@ -219,7 +220,7 @@ Inside the type, we're doing something new. `types.GraphQLList` is an array, so 
                       return axios.get('https://www.reddit.com/hot/.json?count=25', {
                           headers: { 'Content-Type': 'application/json' },
                       }).then(function(response) {
-			      const hits = [];
+			                    const hits = [];
                           response.data.data.children.forEach(function(item){
                           	  hits.push(item);
                           });
