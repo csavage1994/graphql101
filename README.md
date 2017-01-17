@@ -1,5 +1,5 @@
 # Starting to Think in GraphQL
-This will be a no BS guide to understanding what GraphQL is and why it does what it does. I'm not going to show you how to set up webpack or babel (Hint: we're not going to use it here) or provide you with a starter kit that you don't understand half of. What I will do is give you a working barebones example and my thought process when using GraphQL in production. We're going to keep it simple here and stick with data retrieval
+This will be a no BS guide to understanding what GraphQL is and why it does what it does. I'm not going to show you how to set up webpack or babel (Hint: we're not going to use it here) or provide you with a starter kit that you don't understand half of. What I will do is give you a working barebones example and my thought process when using GraphQL in production. We're going to keep it simple here and stick with data retrieval. This repo also contains a similar example to what I'll walk through here, with more fields and nested objects. I'd recommend reading and following through this readme first, then check out what I have in my `app.js`. To run it, simply run `node app.js` and navigate to `localhost:4000/graphql`.
 
 ## What is GraphQL + why do I need it?
 Think of GraphQL like it's Amazon, if you've ever ordered multiple items from Amazon at the same time from different sources, you'd know there's 2 options:
@@ -284,4 +284,4 @@ You should get something like this back
     
 If you get a response like this, you've made it! I'd recommend going back and seeing if you can modify `RedditType` to pull more fields. Try pulling out the `score` field, but be careful, it's stored as an integer instead of a string ( Hint: this should only be a 1 line change! ) If you want to get more advanced, try pulling information from a seperate source, you'll have to define a new data type, add it to our query, and create a new resolve function for retrieving the information, but this is where the real power in GraphQL lies.
 
-Inside this repo, there's also a bit about how to deal with nested objects inside your response, I can write a snippet about this and also go into more detail about pulling from multiple sources if there's any interest!
+Inside this repo, there's also a bit about how to deal with nested objects inside your response, I can write a snippet about this and also go into more detail about pulling from multiple sources and using GraphQL from the front end if there's any interest!
