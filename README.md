@@ -222,7 +222,7 @@ Inside the type, we're doing something new. `types.GraphQLList` is an array, so 
                       }).then(function(response) {
 			                    const hits = [];
                           response.data.data.children.forEach(function(item){
-                          	  hits.push(item);
+                          	  hits.push(item.data);
                           });
                           return hits;
                       });
